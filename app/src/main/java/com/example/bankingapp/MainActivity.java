@@ -13,6 +13,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
         finish(); // Back दाबल्यावर MainActivity ला परत येणार नाही
-
+//just for github i want write ....from pranv
     }
 }
