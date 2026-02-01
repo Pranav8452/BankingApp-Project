@@ -20,13 +20,12 @@ public class TransactionHistoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaction_history);
 
-        // ID must match XML
-        //ID must match in xml
         recyclerView = findViewById(R.id.rvTransactions);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // TEMP test data
         transactionList = new ArrayList<>();
+
+        // Sample test data
         transactionList.add(new Transaction(
                 "user1@gmail.com",
                 "user2@gmail.com",
@@ -34,11 +33,7 @@ public class TransactionHistoryActivity extends AppCompatActivity {
                 "30 Jan 2026"
         ));
 
-        adapter = new TransactionAdapter(
-                transactionList,
-                "user1@gmail.com"   // logged-in user
-        );
-
+        adapter = new TransactionAdapter(transactionList, "user1@gmail.com");
         recyclerView.setAdapter(adapter);
     }
 }
